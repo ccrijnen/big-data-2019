@@ -72,6 +72,9 @@ The data collection will therefore only download the KGS dataset**.
 If statistics on the GoGoD dataset are also desired, it needs to be manually downloaded and extracted into the folder `data/GoGoD`.
 
 At the beginning of this project, the decision was made to cover two aspects of the game records, the game length and the winner.
+
+#### Statistics
+
 The following statistics will be considered in the analysis and comparison tasks:
 
 Game Length statistics:
@@ -100,7 +103,7 @@ If both the KGS and GoGoD data are found the final `DataSet` will be a union of 
 
 #### Offline analysis
 
-The `GoBatchJob.offlineAnalysis()` method calculates the Game Length and Winner statistics mentioned in [Data](#data).
+The `GoBatchJob.offlineAnalysis()` method calculates the Game Length and Winner [statistics](#statistics).
 The results of the offline analysis are saved to `results/GameLengthStatsBatch.txt` and `results/WinnerStatsBatch.txt`.
 
 ### Stream processing
@@ -120,14 +123,14 @@ If both the KGS and GoGoD data are found the final `DataStream` will be a union 
 
 #### Online analysis
 
-The `GoStreamingJob.onlineAnalysis()` method calculates the Game Length and Winner statistics mentioned in [Data](#data), 
+The `GoStreamingJob.onlineAnalysis()` method calculates the Game Length and Winner statistics mentioned in [statistics](#statistics), 
 **in a one hour window**.
 The results of the online analysis are saved to `results/GameLengthStatsStream.txt` and `results/WinnerStatsStream.txt`.
 
 #### Online comparison
 
 Compare the [hourly online results](#online-analysis) with the [offline results](#offline-analysis) 
-of the statistics mentioned in [Data](#data) by running the `GoStreamingJob.onlineComparison()` method.
+of the [statistics](#statistics) by running the `GoStreamingJob.onlineComparison()` method.
 Throws an error if the offline results can't be found in `results/`.
 
 #### Online prediction
