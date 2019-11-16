@@ -122,7 +122,7 @@ If both the KGS and GoGoD data are found the final `DataStream` will be a union 
 
 #### Online analysis
 
-The `GoStreamingJob.onlineAnalysis()` method calculates the Game Length and Winner statistics mentioned in [statistics](#statistics), 
+The `GoStreamingJob.onlineAnalysis()` method calculates the Game Length and Winner [statistics](#statistics), 
 **in a one hour window**.
 The results of the online analysis are saved to `results/GameLengthStatsStream.txt` and `results/WinnerStatsStream.txt`.
 
