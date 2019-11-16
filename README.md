@@ -72,10 +72,9 @@ The data collection will therefore only download the KGS dataset**.
 If statistics on the GoGoD dataset are also desired, it needs to be manually downloaded and extracted into the folder `data/GoGoD`.
 
 At the beginning of this project, the decision was made to cover two aspects of the game records, the game length and the winner.
+The following statistics will be considered in the analysis and comparison tasks:
 
 #### Statistics
-
-The following statistics will be considered in the analysis and comparison tasks:
 
 Game Length statistics:
 - **count** - number of game records
