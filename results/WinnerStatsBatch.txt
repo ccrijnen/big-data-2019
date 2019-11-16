@@ -1,0 +1,6 @@
+(GoGoD,black,0.49222797)
+(GoGoD,none,0.020725388)
+(GoGoD,white,0.48704663)
+(KGS,black,0.41563785)
+(KGS,none,0.012345679)
+(KGS,white,0.5720165)

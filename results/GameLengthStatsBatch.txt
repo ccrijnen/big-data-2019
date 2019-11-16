@@ -1,0 +1,8 @@
+(GoGoD,count,193)
+(GoGoD,max,355)
+(GoGoD,mean,205)
+(GoGoD,min,50)
+(KGS,count,243)
+(KGS,max,355)
+(KGS,mean,199)
+(KGS,min,12)
