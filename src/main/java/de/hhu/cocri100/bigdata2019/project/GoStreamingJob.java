@@ -18,10 +18,10 @@
 
 package de.hhu.cocri100.bigdata2019.project;
 
-import de.hhu.cocri100.bigdata2019.project.data.DataUtils;
-import de.hhu.cocri100.bigdata2019.project.data.GameStats;
-import de.hhu.cocri100.bigdata2019.project.data.GameStatsGenerator;
-import de.hhu.cocri100.bigdata2019.project.data.GameStatsSource;
+import de.hhu.cocri100.bigdata2019.project.source.DataUtils;
+import de.hhu.cocri100.bigdata2019.project.source.GameStats;
+import de.hhu.cocri100.bigdata2019.project.source.GameStatsGenerator;
+import de.hhu.cocri100.bigdata2019.project.source.GameStatsSource;
 import de.hhu.cocri100.bigdata2019.project.transformations.Transformations;
 import de.hhu.cocri100.bigdata2019.project.transformations.StreamingTransformations;
 import org.apache.flink.api.java.tuple.Tuple2;
@@ -34,7 +34,7 @@ import org.apache.flink.streaming.api.windowing.time.Time;
 
 import java.util.*;
 
-import static de.hhu.cocri100.bigdata2019.project.data.DataUtils.*;
+import static de.hhu.cocri100.bigdata2019.project.source.DataUtils.*;
 
 /**
  * Skeleton for a Flink Streaming Job.

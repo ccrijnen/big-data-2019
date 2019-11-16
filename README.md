@@ -22,7 +22,7 @@ and the [GoGoD dataset](https://gogodonline.co.uk/), a collection of game record
 3. There are different classes with a main method
     - [Main.java](src/main/java/de/hhu/cocri100/bigdata2019/project/Main.java) - 
     CLI: Main interface to run the tasks
-    - [DownloadKgsData.java](src/main/java/de/hhu/cocri100/bigdata2019/project/data/DownloadKgsData.java) - 
+    - [DownloadKgsData.java](src/main/java/de/hhu/cocri100/bigdata2019/project/source/DownloadKgsData.java) - 
     download KGS dataset
     - [GoBatchJob.java](src/main/java/de/hhu/cocri100/bigdata2019/project/GoBatchJob.java) - 
     batch processing
@@ -33,7 +33,7 @@ and the [GoGoD dataset](https://gogodonline.co.uk/), a collection of game record
 
 The structure is organized as follows:
 
-- [de.hhu.cocri100.bigdata2019.project.data](src/main/java/de/hhu/cocri100/bigdata2019/project/data) - 
+- [de.hhu.cocri100.bigdata2019.project.source](src/main/java/de/hhu/cocri100/bigdata2019/project/source) - 
 all data processing related features
 - [de.hhu.cocri100.bigdata2019.project.transformations](src/main/java/de/hhu/cocri100/bigdata2019/project/transformations) - 
 all inherited classes (maps, reduces, sinks, etc.)
@@ -51,21 +51,21 @@ A game record contains the moves of the game in a tree structure with additional
 (e.g. the winner of the game, the player names, etc).
 To parse a game record to a POJO object [sgf4j](https://github.com/toomasr/sgf4j) is used.
 
-- [DownloadKgsData.java](src/main/java/de/hhu/cocri100/bigdata2019/project/data/DownloadKgsData.java) - 
+- [DownloadKgsData.java](src/main/java/de/hhu/cocri100/bigdata2019/project/source/DownloadKgsData.java) - 
 (String) _dataRoot_ optional parameter, default: `data/`, 
 downloads the KGS archives to `dataRoot/raw` and then unzips them to `dataRoot/KGS`
-- [GameStats.java](src/main/java/de/hhu/cocri100/bigdata2019/project/data/GameStats.java) - 
+- [GameStats.java](src/main/java/de/hhu/cocri100/bigdata2019/project/source/GameStats.java) - 
 POJO to store a Go record
     - _fileName_ - (String) id of the object
     - _datasetName_ - (String) name of the dataset (KGS or GoGoD)
     - _gameLength_ - (Integer) number of moves in the game record
     - _winner_ - (String) winner of the game (black/white/none)
     - _dateTime_ - (DateTime) random date and time used to model event time stream processing
-- [GameStatsGenerator.java](src/main/java/de/hhu/cocri100/bigdata2019/project/data/GameStatsGenerator.java) - 
+- [GameStatsGenerator.java](src/main/java/de/hhu/cocri100/bigdata2019/project/source/GameStatsGenerator.java) - 
 reads Go records from a sgf file, generates a random time stamp and returns a GameStats object
-- [GameStatsSource.java](src/main/java/de/hhu/cocri100/bigdata2019/project/data/GameStatsSource.java) - 
+- [GameStatsSource.java](src/main/java/de/hhu/cocri100/bigdata2019/project/source/GameStatsSource.java) - 
 simulates a streaming source with delayed events
-- [DataUtils.java](src/main/java/de/hhu/cocri100/bigdata2019/project/data/DataUtils.java) - data related utils
+- [DataUtils.java](src/main/java/de/hhu/cocri100/bigdata2019/project/source/DataUtils.java) - data related utils
 
 **Since the GoGoD dataset is a commercial dataset it can't be directly downloaded.
 The data collection will therefore only download the KGS dataset**.

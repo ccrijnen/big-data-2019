@@ -4,8 +4,8 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
 
-import static de.hhu.cocri100.bigdata2019.project.data.DataUtils.*;
-import static de.hhu.cocri100.bigdata2019.project.data.DownloadKgsData.downloadAndUnzipKgs;
+import static de.hhu.cocri100.bigdata2019.project.source.DataUtils.*;
+import static de.hhu.cocri100.bigdata2019.project.source.DownloadKgsData.downloadAndUnzipKgs;
 
 public class Main {
     private static final String format = "***************** %-20s *****************\n";

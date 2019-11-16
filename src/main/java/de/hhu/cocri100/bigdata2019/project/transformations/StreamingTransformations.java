@@ -1,6 +1,6 @@
 package de.hhu.cocri100.bigdata2019.project.transformations;
 
-import de.hhu.cocri100.bigdata2019.project.data.DataUtils;
+import de.hhu.cocri100.bigdata2019.project.source.DataUtils;
 import org.apache.flink.api.common.functions.ReduceFunction;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.api.java.tuple.Tuple3;

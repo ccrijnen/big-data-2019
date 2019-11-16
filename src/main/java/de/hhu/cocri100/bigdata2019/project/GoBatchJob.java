@@ -18,10 +18,10 @@
 
 package de.hhu.cocri100.bigdata2019.project;
 
-import de.hhu.cocri100.bigdata2019.project.data.GameStatsGenerator;
+import de.hhu.cocri100.bigdata2019.project.source.GameStatsGenerator;
 import de.hhu.cocri100.bigdata2019.project.transformations.Transformations;
-import de.hhu.cocri100.bigdata2019.project.data.DataUtils;
-import de.hhu.cocri100.bigdata2019.project.data.GameStats;
+import de.hhu.cocri100.bigdata2019.project.source.DataUtils;
+import de.hhu.cocri100.bigdata2019.project.source.GameStats;
 import de.hhu.cocri100.bigdata2019.project.transformations.BatchTransformations;
 import org.apache.flink.api.common.operators.Order;
 import org.apache.flink.api.java.DataSet;
@@ -32,8 +32,8 @@ import org.apache.flink.core.fs.FileSystem;
 
 import java.util.*;
 
-import static de.hhu.cocri100.bigdata2019.project.data.DataUtils.*;
-import static de.hhu.cocri100.bigdata2019.project.data.DataUtils.gogodRoot;
+import static de.hhu.cocri100.bigdata2019.project.source.DataUtils.*;
+import static de.hhu.cocri100.bigdata2019.project.source.DataUtils.gogodRoot;
 
 
 /**
