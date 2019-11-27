@@ -74,19 +74,6 @@ If statistics on the GoGoD dataset are also desired, it needs to be manually dow
 At the beginning of this project, the decision was made to cover two aspects of the game records, the game length and the winner.
 The following statistics will be considered in the analysis and comparison tasks:
 
-#### Statistics
-
-Game Length statistics:
-- **count** - number of game records
-- **max** - max game length
-- **min** - min game length
-- **mean** - average game length
-
-Winner statistics:
-- **black** - percentage of black wins
-- **white** - percentage of white wins
-- **none** - percentage of draws or game records with unknown outcome
-
 ### Batch processing
 
 The [GoBatchJob.java](src/main/java/de/hhu/cocri100/bigdata2019/project/GoBatchJob.java) 
@@ -102,8 +89,17 @@ If both the KGS and GoGoD data are found the final `DataSet` will be a union of 
 
 #### Offline analysis
 
-The `GoBatchJob.offlineAnalysis()` method calculates the Game Length and Winner [statistics](#statistics).
+The `GoBatchJob.offlineAnalysis()` method calculates these Game Length and Winner [statistics](#offline-statistics).
 The results of the offline analysis are saved to `results/GameLengthStatsBatch.txt` and `results/WinnerStatsBatch.txt`.
+
+##### Offline statistics
+
+Game Length statistics | Winner statistics
+-----------------------|------------------
+**count** - number of game records | **black** - percentage of black wins
+**max** - max game length | **white** - percentage of white wins
+**min** - min game length | **none** - percentage of draws or game records with unknown outcome
+**mean** - average game length | 
 
 ### Stream processing
 
@@ -122,29 +118,47 @@ If both the KGS and GoGoD data are found the final `DataStream` will be a union 
 
 #### Online analysis
 
-The `GoStreamingJob.onlineAnalysis()` method calculates the Game Length and Winner [statistics](#statistics), 
+The `GoStreamingJob.onlineAnalysis()` method calculates these Game Length and Winner [statistics](#online-statistics) 
 **in a one hour window**.
 The results of the online analysis are saved to `results/GameLengthStatsStream.txt` and `results/WinnerStatsStream.txt`.
 
+##### Online statistics
+
+Game Length statistics | Winner statistics
+-----------------------|------------------
+**count** - number of game records | **black** - percentage of black wins
+**max** - max game length | **white** - percentage of white wins
+**min** - min game length | **none** - percentage of draws or game records with unknown outcome
+**mean** - average game length | 
+
 #### Online comparison
 
-Compare the [hourly online results](#online-analysis) with the [offline results](#offline-analysis) 
-of the [statistics](#statistics) by running the `GoStreamingJob.onlineComparison()` method.
+Compare the [hourly online results](#online-analysis) with the [offline results](#offline-analysis) by running the 
+`GoStreamingJob.onlineComparison()` method.
 Throws an error if the offline results can't be found in `results/`.
+
+##### Compared statistics
+
+Game Length statistics | Winner statistics
+-----------------------|------------------
+**count** - number of game records | **black** - percentage of black wins
+**max** - max game length | **white** - percentage of white wins
+**min** - min game length | **none** - percentage of draws or game records with unknown outcome
+**mean** - average game length | 
 
 #### Online prediction
 
 The following predictions are calculated by running the `GoStreamingJob.onlinePrediction()` method.
-
-Game Length predictions for the next hour:
-- **mean** - average game length
-
-Winner predictions for the next hour:
-- **black** - percentage of black wins
-- **white** - percentage of white wins
-- **none** - percentage of draws or game records with unknown outcome
-
 These statistics are calculated using running averages.
+
+##### Predicted statistics
+
+Game Length statistics | Winner statistics
+-----------------------|------------------
+**mean** - average game length | **black** - percentage of black wins
+- | **white** - percentage of white wins
+- | **none** - percentage of draws or game records with unknown outcome
+
 
 ### Visualization
 
