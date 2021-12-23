@@ -1,6 +1,6 @@
 # Big Data 2019 - Go Game Records Project
 
-In this project we are analyzing Go games using using [Flink 1.9](https://ci.apache.org/projects/flink/flink-docs-release-1.9/), 
+In this project we are analyzing Go games using [Flink 1.9](https://ci.apache.org/projects/flink/flink-docs-release-1.9/), 
 a popular big data framework for both stream and batch analytics.
 
 The data for this project are game records of the board game Go. 
